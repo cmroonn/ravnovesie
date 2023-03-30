@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
   {
     var buttons = document.querySelectorAll(".call-popup");
     var popup = document.getElementById('form-popup');
+    var menu = document.getElementById("menu");
     buttons.forEach(function (btn) {
       btn.addEventListener("click", function () {
         openPopup("form-popup");
+        menu.classList.remove('active');
       });
     });
     document.body.addEventListener('keydown', function (e) {
@@ -15,13 +17,19 @@ document.addEventListener("DOMContentLoaded", function () {
         closePopup('thank-popup');
       }
     });
+    var elems = document.querySelectorAll('.mob-menu__nav a');
+    elems.forEach(function (elem) {
+      elem.addEventListener("click", function () {
+        menu.classList.remove('active');
+      });
+    });
   }
   {
     var _buttons = document.querySelectorAll(".welcome__burger");
-    var menu = document.getElementById("menu");
+    var _menu = document.getElementById("menu");
     _buttons.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        menu.classList.toggle("active");
+        _menu.classList.toggle("active");
       });
     });
   }
