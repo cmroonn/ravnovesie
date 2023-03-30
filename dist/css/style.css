@@ -1009,7 +1009,7 @@ h1, h2 {
   box-shadow: -20px 10px 40px rgba(40, 40, 40, 0.2);
   border-radius: calc(10 / var(--sz) * 100vw);
   position: absolute;
-  top: 45%;
+  top: 43%;
   transform: translate(0, -50%);
   right: 0;
   width: calc(480 / var(--sz) * 100vw);
@@ -1025,14 +1025,15 @@ h1, h2 {
     margin-top: calc(10 / var(--sz) * 100vw);
     padding: calc(40 / var(--sz) * 100vw) calc(24 / var(--sz) * 100vw) calc(30 / var(--sz) * 100vw) calc(20 / var(--sz) * 100vw);
     width: 100%;
-    height: auto;
+    min-height: calc(340 / var(--sz) * 100vw);
+    height: unset;
   }
 }
 
 .info__plate__buttons {
   position: absolute;
   width: 100%;
-  top: calc(79 / var(--sz) * 100vw);
+  top: calc(83 / var(--sz) * 100vw);
   right: calc(50 / var(--sz) * 100vw);
   z-index: 1;
   max-width: fit-content;
@@ -1040,7 +1041,7 @@ h1, h2 {
 @media (max-width: 500px) {
   .info__plate__buttons {
     left: calc(20 / var(--sz) * 100vw);
-    top: calc(700 / var(--sz) * 100vw);
+    top: calc(735 / var(--sz) * 100vw);
     max-width: unset;
   }
 }
@@ -1129,6 +1130,23 @@ h1, h2 {
 @media (max-width: 500px) {
   .info-sphera {
     bottom: calc(181 / var(--sz) * 100vw);
+  }
+}
+
+.info__skeleton {
+  z-index: 1;
+  position: absolute;
+  top: calc(28 / var(--sz) * 100vw);
+  left: calc(356 / var(--sz) * 100vw);
+  width: calc(321 / var(--sz) * 100vw);
+  height: calc(557 / var(--sz) * 100vw);
+}
+@media (max-width: 500px) {
+  .info__skeleton {
+    width: calc(194 / var(--sz) * 100vw);
+    height: calc(335 / var(--sz) * 100vw);
+    left: calc(60 / var(--sz) * 100vw);
+    top: calc(387 / var(--sz) * 100vw);
   }
 }
 
