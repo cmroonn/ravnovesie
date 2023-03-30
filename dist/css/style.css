@@ -1019,10 +1019,9 @@ h1, h2 {
 @media (max-width: 500px) {
   .info__plate {
     position: relative;
-    top: 0;
     right: unset;
     transform: unset;
-    margin-top: calc(10 / var(--sz) * 100vw);
+    top: calc(15 / var(--sz) * 100vw);
     padding: calc(40 / var(--sz) * 100vw) calc(24 / var(--sz) * 100vw) calc(30 / var(--sz) * 100vw) calc(20 / var(--sz) * 100vw);
     width: 100%;
     min-height: calc(340 / var(--sz) * 100vw);
@@ -1038,11 +1037,20 @@ h1, h2 {
   z-index: 1;
   max-width: fit-content;
 }
+.info__plate__buttons.info__plate__buttons-mob {
+  display: none;
+}
 @media (max-width: 500px) {
   .info__plate__buttons {
     left: calc(20 / var(--sz) * 100vw);
-    top: calc(735 / var(--sz) * 100vw);
+    top: -1px;
     max-width: unset;
+  }
+  .info__plate__buttons.info__plate__buttons-mob {
+    display: block;
+  }
+  .info__plate__buttons.info__plate__buttons-desk {
+    display: none;
   }
 }
 
