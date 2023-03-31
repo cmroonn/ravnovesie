@@ -2,13 +2,24 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   {
-    var buttons = document.querySelectorAll(".call-popup");
-    var popup = document.getElementById('form-popup');
+    var buttons = document.querySelectorAll(".order-call");
+    var popup = document.getElementById('call-popup');
     var menu = document.getElementById("menu");
     buttons.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        openPopup("form-popup");
+        openPopup("call-popup");
         menu.classList.remove('active');
+      });
+    });
+  }
+  {
+    var _buttons = document.querySelectorAll(".call-popup");
+    var _popup = document.getElementById('form-popup');
+    var _menu = document.getElementById("menu");
+    _buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        openPopup("form-popup");
+        _menu.classList.remove('active');
       });
     });
     document.body.addEventListener('keydown', function (e) {
@@ -20,26 +31,26 @@ document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll('.mob-menu__nav a');
     elems.forEach(function (elem) {
       elem.addEventListener("click", function () {
-        menu.classList.remove('active');
+        _menu.classList.remove('active');
       });
     });
   }
   {
-    var _buttons = document.querySelectorAll(".welcome__burger");
-    var _menu = document.getElementById("menu");
-    _buttons.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        _menu.classList.toggle("active");
-      });
-    });
-  }
-  {
-    var _buttons2 = document.querySelectorAll(".info__plate__btn");
-    var texts = document.querySelectorAll(".info__plate__text");
-    var dots = document.querySelectorAll(".dot");
+    var _buttons2 = document.querySelectorAll(".welcome__burger");
+    var _menu2 = document.getElementById("menu");
     _buttons2.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        _buttons2.forEach(function (btn) {
+        _menu2.classList.toggle("active");
+      });
+    });
+  }
+  {
+    var _buttons3 = document.querySelectorAll(".info__plate__btn");
+    var texts = document.querySelectorAll(".info__plate__text");
+    var dots = document.querySelectorAll(".dot");
+    _buttons3.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        _buttons3.forEach(function (btn) {
           return btn.classList.remove('active');
         });
         texts.forEach(function (text) {
@@ -61,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     dots.forEach(function (dot) {
       dot.addEventListener("click", function () {
-        _buttons2.forEach(function (btn) {
+        _buttons3.forEach(function (btn) {
           return btn.classList.remove('active');
         });
         texts.forEach(function (text) {
@@ -71,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
           return dot.classList.remove('active');
         });
         texts.forEach(function (text) {
-          _buttons2.forEach(function (btn) {
+          _buttons3.forEach(function (btn) {
             if (dot.dataset.id === text.dataset.id && btn.dataset.id === dot.dataset.id) {
               btn.classList.add('active');
               text.classList.add('active');

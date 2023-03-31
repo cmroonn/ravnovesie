@@ -253,6 +253,10 @@ h1, h2 {
   margin-right: calc(40 / var(--sz) * 100vw);
   font-size: calc(16 / var(--sz) * 100vw);
   font-weight: 300;
+  transition: text-shadow 0.3s;
+}
+.welcome__nav a:hover {
+  text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
 }
 @media (max-width: 500px) {
   .welcome__nav {
@@ -708,7 +712,7 @@ h1, h2 {
 .consequence__item {
   padding: calc(20 / var(--sz) * 100vw) calc(15 / var(--sz) * 100vw);
   font-size: calc(17 / var(--sz) * 100vw);
-  font-weight: 300;
+  font-weight: 600;
   background-size: cover;
   height: calc(157 / var(--sz) * 100vw);
   margin-bottom: calc(30 / var(--sz) * 100vw);
@@ -817,6 +821,9 @@ h1, h2 {
   margin: 0;
   font-size: calc(17 / var(--sz) * 100vw);
   font-weight: 300;
+}
+.consequence__quote .highlight {
+  cursor: pointer;
 }
 .consequence__quote:before {
   content: "";
@@ -996,6 +1003,22 @@ h1, h2 {
   .info__pic .fraza {
     display: none;
   }
+  .info__pic .dot circle:first-child {
+    r: 9;
+    transition: 0.2s ease;
+  }
+  .info__pic .dot circle:last-child {
+    r: 13;
+    transition: 0.2s ease;
+  }
+  .info__pic .dot.active circle:first-child {
+    r: 10;
+    transition: 0.2s ease;
+  }
+  .info__pic .dot.active circle:last-child {
+    r: 14;
+    transition: 0.2s ease;
+  }
 }
 
 .info__content {
@@ -1070,11 +1093,12 @@ h1, h2 {
 }
 @media (max-width: 500px) {
   .info__plate__btn {
-    margin-right: calc(20 / var(--sz) * 100vw);
+    margin-right: calc(18 / var(--sz) * 100vw);
   }
   .info__plate__btn svg {
-    width: calc(12 / var(--sz) * 100vw);
-    height: calc(20 / var(--sz) * 100vw);
+    display: block;
+    width: calc(19 / var(--sz) * 100vw);
+    height: calc(30 / var(--sz) * 100vw);
   }
 }
 
